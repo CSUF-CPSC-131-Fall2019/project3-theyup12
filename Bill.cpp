@@ -24,7 +24,7 @@ if (currMonth > due_month_ || currDay > due_day_){
 }
 else
 	return false;
-	
+
 }
 // This function member implementation is complete
 unsigned int Bill::daysOverdue(const unsigned int &currMonth,
