@@ -7,6 +7,7 @@
 ************************************************/
 
 // ADD IMPLEMENTATION OF CONSTRUCTOR FOR CLASS Bill
+// create a constructor to insert the bill
 Bill::Bill(const std::string & name,
 		const double & dues,
 		const unsigned int & month,
@@ -19,6 +20,7 @@ bool Bill::isOverdue(const unsigned int &currMonth,
   // false otherwise
 
 // TO BE COMPLETED
+//this if statement is use to check if the due month and the due day is past due
 if (currMonth > due_month_ || currDay > due_day_){
 	return true;
 }

@@ -74,6 +74,7 @@ bool Strategy_t<Strategy>::payBills(const unsigned int &currMonth,
       // COMPLETE BELOW:
       // COMPUTE THE TOTAL PENALTY IN VARIABLE  <fee> AS
       // 35 + round(0.1 * days overdue * amount due) / 100
+      // this equation is use when the bill time is over due
       fee = 35 + round(0.1 * someBill.daysOverdue(currMonth, currDay) *
                        someBill.amount_due_) / 100;
     }
@@ -116,6 +117,7 @@ void Strategy_t<Strategy>::readFile(const std::string &filename) {
 
         // COMPLETE BELOW:
         // ADD <newBill> TO THE STACK/QUEUE OF <allBills_>
+        //push the new bill into queue strategy
         allBills_.push(newBill);
       }
 
@@ -134,6 +136,7 @@ void Strategy_t<Strategy>::readFile(const std::string &filename) {
 
         // COMPLETE BELOW:
         // CALL THE FUNCTION MEMBER TO PAY AS MANY BILLS AS POSSIBLE
+        // add current month and current day from pay file
         payBills(currMonth, currDay);
       }
     }
